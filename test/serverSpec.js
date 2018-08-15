@@ -15,7 +15,9 @@ describe('', function() {
   .end(function(err, res){
       res.should.have.status(200);
       res.body.should.be.a('array');
-      //res.body[0].should.have.property('catName');
+      res.body[0].should.have.property('catName');
+      res.body[0].catName.should.equal('String1');
+
       done();
   });
 })
