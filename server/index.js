@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../angular-client/')));
 
 app.get('/cats', function (req, res) {
- 	db.Cat.find({ catName: 'String1'} ,function (err, data) {
+ 	db.Cat.find({ catName: 'Basbos'} ,function (err, data) {
  		if(err) res.send(err);
  		else res.send(data)
  	});
@@ -17,7 +17,7 @@ app.get('/cats', function (req, res) {
 });
 
 app.post('/cats', function (req, res) {
-  // TODO - your code here!
+ 
   
 })
 
