@@ -4,12 +4,12 @@ const db = require('../database/index.js');
 const bodyParser = require('body-parser');
 const app = express();
 
+
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../angular-client/')));
 
 app.get('/cats', function (req, res) {
-  // TODO - your code here!
-  
+
 
 });
 

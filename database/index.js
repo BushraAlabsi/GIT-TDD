@@ -20,7 +20,7 @@ let catSchema = mongoose.Schema({
 let Cat = mongoose.model('Cat', catSchema);
 
 let save = (data,callback) => {
-  var cat = new Cat({data});
+  var cat = new Cat(data);
   cat.save(callback);
 
 }
