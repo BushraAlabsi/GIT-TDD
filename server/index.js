@@ -9,8 +9,10 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../angular-client/')));
 
 app.get('/cats', function (req, res) {
- 	
-
+ 	db.Cat.find({ catName: 'String1'} ,function (err, data) {
+ 		if(err) res.send(err);
+ 		else res.send(data)
+ 	});
 
 });
 
