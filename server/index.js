@@ -17,7 +17,10 @@ app.get('/cats', function (req, res) {
 });
 
 app.post('/cats', function (req, res) {
- 
+  db.save(req.body,function(err,data){
+  	if(err) res.send(err);
+  	else res.sendStatus(201);
+  })
   
 })
 
